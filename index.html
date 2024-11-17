@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>我的第一个网站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HelloWorld!</h1>
-    <p>欢迎访问我的网站！</p>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <p>Explore my codes, academic work, memories, and more!</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('code')">Code</button>
+        <button onclick="showSection('academic')">Academic</button>
+        <button onclick="showSection('memory')">Memory</button>
+        <button onclick="showSection('other')">Other</button>
+    </nav>
+
+    <main>
+        <!-- Code Section -->
+        <section id="code" class="hidden">
+            <h2>Code</h2>
+            <p>Here are my frequently used code snippets:</p>
+            <ul>
+                <li>
+                    <button onclick="showSublist('packages-list')">Packages install</button>
+                    <ul id="packages-list" class="hidden">
+                        <li><a href="Packages install/jupyter.html" target="_blank">Jupyter Path Update</a></li>
+                        <li><a href="Packages install/virtualenv.html" target="_blank">Virtual Environment Creation</a></li>
+                        <li><a href="Packages install/image_processing.html" target="_blank">Image Processing Packages</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Image Processing</a></li>
+                <li><a href="#">Geothermal</a></li>
+            </ul>
+        </section>
+
+        <!-- Academic Section -->
+        <section id="academic" class="hidden">
+            <h2>Academic</h2>
+            <p>Explore my academic work:</p>
+            <ul>
+                <li><a href="#">Published Papers</a></li>
+                <li><a href="#">Conference Presentations</a></li>
+                <li><a href="#">Ongoing Research</a></li>
+            </ul>
+        </section>
+
+        <!-- Memory Section -->
+        <section id="memory" class="hidden">
+            <h2>Memory</h2>
+            <p>Some cherished memories:</p>
+            <img src="images/memory1.jpg" alt="Memory 1" width="200">
+            <img src="images/memory2.jpg" alt="Memory 2" width="200">
+        </section>
+
+        <!-- Other Section -->
+        <section id="other" class="hidden">
+            <h2>Other</h2>
+            <p>Miscellaneous content coming soon...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
